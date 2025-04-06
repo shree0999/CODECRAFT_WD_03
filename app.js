@@ -59,12 +59,6 @@ const showWinner = (winner) => {
     disableBoxes(); 
 }
 
-// const gameOver = () => {
-//     msg.innerText = `GAME OVER!\n Start New Game`;
-//     msgContainer.classList.remove("hide");
-//     //disableBoxes();
-// }
-
 const checkWinner = () => {
     for(let pattern of winPatterns) {
         let pos1Val = boxes[pattern[0]].innerText;
@@ -74,9 +68,7 @@ const checkWinner = () => {
         if(pos1Val != "" && pos2Val != "" && pos3Val != "") {
             if(pos1Val === pos2Val && pos2Val === pos3Val){
                 showWinner(pos1Val);
-            } // else {
-            //     gameOver();
-            // }
+            } 
         }
     }
 };
